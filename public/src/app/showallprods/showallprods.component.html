@@ -1,0 +1,9 @@
+<p>showallprods works!</p>
+<h2>Product List</h2>
+<div class="panel" *ngFor = "let prod of allproducts">
+    <img src={{prod.imageurl}} alt="product photo">
+    <p>{{prod.title}}</p>
+    <p>$ {{prod.price}}</p>
+    <p><button [routerLink]="['edit']">Edit</button><button>Delete</button></p>
+</div>
+<router-outlet></router-outlet>
